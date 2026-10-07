@@ -1,0 +1,114 @@
+{
+  "project": {
+    "output_dir": "figures/data/reference_results/image_reference",
+    "num_samples": 1,
+    "seed": 71000
+  },
+  "geometry": {
+    "box_size": 10.0,
+    "diameter": 0.43362349570200565,
+    "radius": 0.21681174785100282,
+    "statistics_radius_scale": 1.025,
+    "area_fraction": 0.5153958541738062,
+    "num_particles": 349
+  },
+  "target": {
+    "source": "points_file",
+    "points_path": "image_detection/result_files/fiber_centers_normalized.txt"
+  },
+  "phase1": {
+    "alpha": 0.35,
+    "tolerance": 1e-10,
+    "max_iters": 5000,
+    "clearance": 0.0001
+  },
+  "phase2": {
+    "max_iters": 600,
+    "min_iters": 25,
+    "target_loss": 0.0001,
+    "relative_tolerance": 0.0005,
+    "relative_window": 35,
+    "relative_stop_max_loss": 5e-05,
+    "learning_rate": 0.012,
+    "log_every": 25,
+    "use_jit": true,
+    "project_every": 25,
+    "projection_iters": 30,
+    "projection_alpha": 0.12,
+    "projection_tolerance": 1e-12,
+    "projection_clearance": 0.0001,
+    "terminal_projection": true,
+    "terminal_projection_iters": 1200,
+    "terminal_projection_alpha": 0.2,
+    "terminal_projection_tolerance": 1e-12,
+    "terminal_projection_clearance": 0.0001,
+    "require_feasible": false,
+    "max_overlap_tolerance": 0.0,
+    "overlap_tolerance": 1e-12,
+    "lambda_overlap_guard": 8.0
+  },
+  "loss": {
+    "lambda_rdf": 0.2,
+    "lambda_ardf": 0.2,
+    "lambda_nn": 0.2,
+    "lambda_voronoi": 0.2,
+    "lambda_cv": 0.2,
+    "lambda_coord": 0.2,
+    "lambda_reg": 0.001
+  },
+  "rdf": {
+    "enabled": true,
+    "r_min": 0.43,
+    "r_max": 5.0,
+    "num_bins": 48,
+    "sigma": 0.09
+  },
+  "anisotropic_rdf": {
+    "enabled": true,
+    "r_min": 0.43,
+    "r_max": 5.0,
+    "num_r_bins": 36,
+    "num_theta_bins": 18,
+    "sigma_r": 0.09,
+    "sigma_theta": 0.1745329252
+  },
+  "nearest_neighbor": {
+    "enabled": true,
+    "tau": 0.04,
+    "grid_min": 0.3,
+    "grid_max": 1.2,
+    "num_grid": 64,
+    "bandwidth": 0.05
+  },
+  "voronoi_area_distribution": {
+    "enabled": true,
+    "grid_min": 0.02,
+    "grid_max": 0.6,
+    "num_grid": 64,
+    "bandwidth": 0.025,
+    "grid_resolution": 64,
+    "softmax_temperature": 0.0005
+  },
+  "cv": {
+    "enabled": true,
+    "type": "voronoi_area",
+    "grid_resolution": 64,
+    "softmax_temperature": 0.0005,
+    "eps": 1e-08
+  },
+  "coordination": {
+    "enabled": true,
+    "cutoff_radius": 0.65,
+    "beta": 40.0,
+    "grid_min": 0.0,
+    "grid_max": 12.0,
+    "num_grid": 48,
+    "bandwidth": 0.35,
+    "use_mean_coordination_loss": true
+  },
+  "initialization": {
+    "source": "random_overlap",
+    "clearance": 0.0001,
+    "jitter_fraction": 0.0
+  }
+}

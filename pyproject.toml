@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "math-opt-rve"
+version = "0.1.0"
+description = "Statistics-defined periodic particle RVE optimization and Abaqus preprocessing utilities."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "jax>=0.4",
+  "numpy>=1.24",
+  "matplotlib>=3.7",
+  "pyyaml>=6.0",
+  "scipy>=1.10",
+]
+
+[project.optional-dependencies]
+image = [
+  "opencv-python>=4.8",
+  "scikit-image>=0.22",
+]
+
+[project.scripts]
+mathrve = "cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+py-modules = [
+  "cell_list",
+  "cli",
+  "config",
+  "descriptor_statistics",
+  "geometry",
+  "optimizer",
+  "statistics_report",
+]

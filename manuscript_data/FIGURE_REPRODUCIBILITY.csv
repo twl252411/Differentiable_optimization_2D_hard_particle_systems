@@ -1,0 +1,16 @@
+manuscript_figure,public_data,public_generation_code,regeneration_status,limitation
+Figure 1 Final-configuration schematic,figures/Figure-1/Figure-1.pdf,,author-supplied-original,Original PDF and Origin project supplied by the author
+Figure 2 Matched-reference comparison,figures/data/baseline_comparison/runs.csv; figures/data/baseline_comparison/summary_by_method.csv,figures/Figure-2/make_figure_2.py; figures/Figure-2/scripts/plot_benchmark.py,plot-regenerable,Final plotted values are supplied; optimization campaign files are excluded
+Figure 3 Initialization sensitivity,manuscript_data/aggregates/initialization_sensitivity_20_summary.csv; manuscript_data/aggregates/initialization_acceptance_audit.csv,figures/Figure-3/make_initialization_sensitivity_20.py,plot-regenerable,Final 20-run aggregate values and acceptance counts are supplied
+Figure 4 Convergence,figures/data/reference_results/,figures/Figure-4/make_convergence.py,plot-regenerable,Representative final optimization histories are supplied
+Figure 5 Configuration evolution,figures/data/reference_results/; image_detection/fiber_composites_section_v1.jpg; image_detection/result_files/fiber_centers_normalized.txt,figures/Figure-5/make_configuration_evolution.py,plot-regenerable,Representative final configuration history is supplied
+Figure 6 Pair statistics image reference,figures/data/image_reference/,figures/Figure-6/make_pair_statistics.py,plot-regenerable,Final ten-sample processed descriptor data are supplied
+Figure 7 Pair statistics numerical reference,figures/data/random_reference/,figures/Figure-7/make_pair_statistics.py,plot-regenerable,Final ten-sample processed descriptor data are supplied
+Figure 8 Local statistics image reference,figures/data/image_reference/,figures/Figure-8/make_local_statistics.py,plot-regenerable,Final ten-sample processed descriptor data are supplied
+Figure 9 Local statistics numerical reference,figures/data/random_reference/,figures/Figure-9/make_local_statistics.py,plot-regenerable,Final ten-sample processed descriptor data are supplied
+Figure 10 Coordination statistics,figures/data/image_reference/; figures/data/random_reference/,figures/Figure-10/make_coordination_statistics.py,plot-regenerable,Final ten-sample processed descriptor data are supplied
+Figure 11 Descriptor error reduction,figures/data/image_reference/; figures/data/random_reference/,figures/Figure-11/make_error_reduction.py,plot-regenerable,Final ten-sample processed descriptor data are supplied
+Figure C.1 Supplementary descriptor validation,figures/Figure-C1/Figure-C1.pdf,,author-supplied-original,No plotting program or figure data included
+Figure D.1 Image-reference detection,figures/Figure-D1/Figure-D1.pdf,,author-supplied-original,No plotting program or figure data included
+Figure E.1 Elastic illustration,figures/Figure-E1/Figure-E1.pdf,,author-supplied-original,Elastic source data excluded
+Figure E.2 Damage curves,figures/Figure-E2/Figure-E2.pdf,,author-supplied-original,Damage source data excluded

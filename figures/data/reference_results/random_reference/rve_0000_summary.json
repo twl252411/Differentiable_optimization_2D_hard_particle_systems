@@ -1,0 +1,106 @@
+{
+  "algorithm": "two_stage_final_equals_stage2",
+  "accepted": true,
+  "file": "rve_0000.npz",
+  "box_size": [
+    10.0,
+    10.0
+  ],
+  "radius": 0.22223204154727788,
+  "diameter": 0.44446408309455576,
+  "plot_radius": 0.21681174785100282,
+  "plot_diameter": 0.43362349570200565,
+  "radius_scale": 1.025,
+  "num_particles": 349,
+  "area_fraction": 0.5153958541738062,
+  "statistics_area_fraction": 0.5414877692913551,
+  "runtime_seconds": 10.262641899986193,
+  "stage_metrics": {
+    "stage1": {
+      "iterations": 436,
+      "converged": true,
+      "overlap_pairs": 285,
+      "overlap_potential": 9.59736867453951e-11,
+      "seconds": 3.3233287000330165
+    },
+    "stage2": {
+      "iterations": 40,
+      "converged": true,
+      "stop_reason": "target_loss",
+      "seconds": 3.220350900082849,
+      "optimizer_stop_loss": 9.634625166654587e-05,
+      "final_loss": 6.807260797359049e-05,
+      "require_feasible": false,
+      "overlap_tolerance": 1e-12,
+      "final_overlap_loss": 0.0,
+      "feasible": true,
+      "accepted": true,
+      "max_overlap_tolerance": 0.0,
+      "geometry": {
+        "min_center_distance": 0.4445631230290447,
+        "max_overlap": 0.0,
+        "overlap_pairs": 0,
+        "overlap_potential": 0.0
+      },
+      "terminal_projection": {
+        "enabled": true,
+        "iterations": 96,
+        "converged": true,
+        "overlap_pairs": 47,
+        "overlap_potential": 9.536753965953658e-13
+      }
+    }
+  },
+  "final_terms": {
+    "loss_total": 6.807260797359049e-05,
+    "loss_rdf": 8.697704743099166e-07,
+    "loss_ardf": 1.4390240998807258e-08,
+    "loss_nn": 6.514022970804945e-05,
+    "loss_voronoi": 1.6200407117139548e-05,
+    "loss_cv": 7.369884770014323e-06,
+    "loss_coord": 0.00024211048730649054,
+    "loss_reg": 0.001731577212922275,
+    "loss_overlap": 0.0
+  },
+  "history": [
+    {
+      "stage": "stage2",
+      "iteration": 0,
+      "loss_ardf": 5.616058729174256e-09,
+      "loss_coord": 0.0005053580971434712,
+      "loss_cv": 6.419304554583505e-05,
+      "loss_nn": 4.385390752759122e-07,
+      "loss_overlap": 0.0,
+      "loss_rdf": 9.403316170164544e-08,
+      "loss_reg": 0.0,
+      "loss_total": 0.00011472003097878769,
+      "loss_voronoi": 3.510820306473761e-06
+    },
+    {
+      "stage": "stage2",
+      "iteration": 25,
+      "loss_ardf": 1.492878354270033e-08,
+      "loss_coord": 0.0010772899258881807,
+      "loss_cv": 6.420880527002737e-05,
+      "loss_nn": 4.3201856897212565e-05,
+      "loss_overlap": 3.1278179903893033e-06,
+      "loss_rdf": 7.218829409794125e-07,
+      "loss_reg": 0.0016441065818071365,
+      "loss_total": 0.0002670576795935631,
+      "loss_voronoi": 1.6517700714757666e-05
+    },
+    {
+      "stage": "stage2",
+      "iteration": 40,
+      "loss_total": 6.807260797359049e-05,
+      "loss_rdf": 8.697704743099166e-07,
+      "loss_ardf": 1.4390240998807258e-08,
+      "loss_nn": 6.514022970804945e-05,
+      "loss_voronoi": 1.6200407117139548e-05,
+      "loss_cv": 7.369884770014323e-06,
+      "loss_coord": 0.00024211048730649054,
+      "loss_reg": 0.001731577212922275,
+      "loss_overlap": 0.0
+    }
+  ]
+}

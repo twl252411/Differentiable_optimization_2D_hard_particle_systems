@@ -1,0 +1,2 @@
+# Differentiable_optimization_2D_hard_particle_systems
+Differentiable optimization framework for generating periodic particle RVEs with prescribed spatial statistics.

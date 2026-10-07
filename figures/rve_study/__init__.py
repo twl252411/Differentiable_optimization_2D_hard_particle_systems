@@ -1,0 +1,1 @@
+"""Manuscript statistical plotting primitives."""

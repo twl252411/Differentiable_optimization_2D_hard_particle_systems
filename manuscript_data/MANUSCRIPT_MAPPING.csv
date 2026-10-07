@@ -1,0 +1,11 @@
+manuscript_item,public_repository_source,status,notes
+Two-stage optimization and final-state definition,src/optimizer.py; configs/*.yaml,current-code match,points_final equals terminal points_stage2 and terminal projection is part of Stage 2
+RDF and ARDF definitions,src/descriptor_statistics.py,current-code match,pair-count and radial-shell normalization followed by global normalization
+Image-reference input,image_detection/result_files/fiber_centers_normalized.txt,current input,349 normalized particle centers used by from_detected_fibers.yaml
+Matched-reference comparison figure,figures/data/baseline_comparison/runs.csv; figures/data/baseline_comparison/summary_by_method.csv; figures/Figure-2/make_figure_2.py,final figure data,Two matched targets five methods and five paired seeds
+Initialization sensitivity figure,manuscript_data/aggregates/initialization_sensitivity_20_summary.csv; manuscript_data/aggregates/initialization_acceptance_audit.csv; figures/Figure-3/make_initialization_sensitivity_20.py,final figure data,20-run means sample SDs and acceptance counts for eight groups
+Figures 4-11 matched-reference analysis,figures/data/reference_results/; figures/data/image_reference/; figures/data/random_reference/; figures/Figure-4/ through figures/Figure-11/,final figure data,Representative histories and final ten-sample processed descriptor data
+Image and numerical size-scaling tables,manuscript_data/aggregates/size_scaling_reported.csv,final table data,Final reported means sample SDs success rates objectives and exact geometry checks
+Elastic illustration table,,source-data-not-included,Elastic source data are excluded from this upload
+Nonlinear damage extension,,source-data-not-included,Damage source data are excluded; the author-supplied Figure E.2 PDF is retained
+Full FE realization archive,,source-data-not-included,Elastic and damage source data and proprietary Abaqus ODB/CAE files are not included

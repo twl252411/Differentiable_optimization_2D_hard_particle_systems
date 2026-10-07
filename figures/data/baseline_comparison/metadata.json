@@ -1,0 +1,33 @@
+{
+  "design": "matched image-based and numerical references; only target centers differ",
+  "N": 349,
+  "L": 10.0,
+  "nominal_radius": 0.21681174785100282,
+  "hard_core_radius": 0.22223204154727788,
+  "phi1": 0.5153958541738062,
+  "phi_rh": 0.5414877692913551,
+  "radius_scale": 1.025,
+  "paired_seeds": [
+    71000,
+    71001,
+    71002,
+    71003,
+    71004
+  ],
+  "methods": {
+    "overlap_only": "Stage 1 only",
+    "rdf_only": "RDF ablation",
+    "rdf_ardf": "RDF+ARDF ablation",
+    "gradient_free": "SPSA full-descriptor optimization",
+    "proposed": "differentiable full-descriptor optimization"
+  },
+  "evaluation": "common conventional descriptors, exact periodic gap, and identical geometry",
+  "final_configuration": "terminal Stage-2 configuration; no Stage 3",
+  "stage2_target_loss": 0.0001,
+  "maximum_iterations": {
+    "stage1": 5000,
+    "stage2": 600
+  },
+  "data_scope": "final plotted metrics and run metadata for all 50 benchmark runs",
+  "generation_note": "Figure 2 is regenerated directly from the stored run metrics; run-level coordinate files and the optimization launcher are not included."
+}

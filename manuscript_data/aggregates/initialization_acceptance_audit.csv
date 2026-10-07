@@ -1,0 +1,9 @@
+target,initialization,attempts,stage2_stopping_rule_accepted,terminal_exact_feasible,joint_accepted,minimum_normalized_gap_after_projection,provenance
+image_based,regular,20,20,20,20,0.00022278710049095096,target_loss_1e-4_regeneration
+image_based,poisson,20,20,20,20,0.00022270456560358198,target_loss_1e-4_regeneration
+image_based,sobol,20,20,20,20,0.0002227465942283846,target_loss_1e-4_regeneration
+image_based,thomas,20,20,20,20,0.00022277612918109035,target_loss_1e-4_regeneration
+numerical,regular,20,20,20,20,0.0002227128310312576,target_loss_1e-4_regeneration
+numerical,poisson,20,20,20,20,0.00022282394010830764,target_loss_1e-4_regeneration
+numerical,sobol,20,20,20,20,0.0002227520028641461,target_loss_1e-4_regeneration
+numerical,thomas,20,20,20,20,0.00022283016230240094,target_loss_1e-4_regeneration

@@ -1,0 +1,28 @@
+{
+  "design": "matched references; only target centers differ",
+  "N": 349,
+  "L": 10.0,
+  "r": 0.21681174785100282,
+  "r_h": 0.22223204154727788,
+  "phi1": 0.5153958541738062,
+  "phi_rh": 0.5414877692913551,
+  "radius_scale": 1.025,
+  "samples_per_target_initialization": 20,
+  "initializations": [
+    "regular",
+    "poisson",
+    "sobol",
+    "thomas"
+  ],
+  "sobol_definition": "two-dimensional Owen-scrambled Sobol sequence; first N points of the next power-of-two draw",
+  "thomas_definition": "20 uniform periodic parents; N parent labels sampled uniformly; isotropic Gaussian offspring with sigma=0.35",
+  "initial_seed_rule": "71000 + run index for both targets",
+  "stage2_target_loss": 0.0001,
+  "maximum_iterations": {
+    "stage1": 5000,
+    "stage2": 600
+  },
+  "image_target": "image_detection/result_files/fiber_centers_normalized.txt",
+  "numerical_target": "random periodic target with fixed seed 23001",
+  "final_configuration": "terminal Stage-2 configuration; no Stage 3"
+}
