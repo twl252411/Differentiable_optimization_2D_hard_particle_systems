@@ -31,9 +31,6 @@ SUMMARY_CSV = (
     / "aggregates"
     / "initialization_sensitivity_20_summary.csv"
 )
-ACCEPTANCE_CSV = (
-    ROOT / "manuscript_data" / "aggregates" / "initialization_acceptance_audit.csv"
-)
 LAYOUT = {
     "figsize": (6.7, 5.85),
     "left": 0.105,
@@ -96,11 +93,6 @@ def load_rows() -> list[dict[str, str]]:
         return list(csv.DictReader(stream))
 
 
-def load_acceptance() -> list[dict[str, str]]:
-    with ACCEPTANCE_CSV.open(newline="", encoding="utf-8-sig") as stream:
-        return list(csv.DictReader(stream))
-
-
 def grouped_bars(ax, rows, value_col, std_col, ylabel, axis_key, log_scale=False):
     lookup = {(row["case"], row["initialization"]): row for row in rows}
     x = np.arange(len(METHOD_ORDER), dtype=float)
@@ -143,34 +135,13 @@ def grouped_bars(ax, rows, value_col, std_col, ylabel, axis_key, log_scale=False
 
 def main() -> None:
     rows = load_rows()
-    acceptance = load_acceptance()
-    if len(rows) != 8 or len(acceptance) != 8:
+    if len(rows) != 8:
         raise ValueError("expected eight 20-run groups")
     fig, axes = setup_grid(2, 2, square=True, **LAYOUT)
     for ax, (value_col, std_col, ylabel, axis_key, log_scale) in zip(
         axes.ravel(), PANEL_SPECS
     ):
         grouped_bars(ax, rows, value_col, std_col, ylabel, axis_key, log_scale)
-    exceptions = [row for row in acceptance if row["joint_accepted"] != row["attempts"]]
-    if exceptions:
-        lines = [
-            "Accepted: "
-            + ", ".join(
-                f"{row['target']} {row['initialization']}: {row['joint_accepted']}/{row['attempts']}"
-                for row in exceptions
-            )
-        ]
-    else:
-        lines = ["Accepted: 20/20 for all groups"]
-    axes[1, 1].text(
-        0.98,
-        0.94,
-        "\n".join(lines),
-        transform=axes[1, 1].transAxes,
-        ha="right",
-        va="top",
-        fontsize=7.5,
-    )
     add_panel_labels(axes, label_offset=(-45, 8))
     save_figure(fig, Path(__file__).resolve().parent / f"{FIGURE_NAME}.png")
 
