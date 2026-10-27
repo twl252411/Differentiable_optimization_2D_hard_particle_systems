@@ -139,7 +139,7 @@ def _plot_overlap(ax, result, axis_specs: dict[str, AxisSpec]) -> None:
     ax.set_xticks(x)
     ax.set_xticklabels(["Stage 1", "Stage 2"])
     ax.set_yscale("log")
-    ax.set_ylabel("Overlap potential")
+    ax.set_ylabel("Overlap loss")
     apply_axis_spec(ax, y=axis_specs["overlap_y"])
 
 
