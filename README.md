@@ -77,10 +77,29 @@ The matched image-based and numerical references use the same numerical setup:
 - identical descriptor discretization, weights, initialization controls, and
   stopping definitions.
 
-All current differentiable studies use a Stage-2 target total loss of `1e-4`.
-The matched-reference and initialization studies use maximum Stage-1/Stage-2
-iteration counts of `5000/600`. The size-scaling study used `8000/12000` so that
-the largest and densest cases could reach the same target.
+## Experiment-specific optimization controls
+
+The default configuration files, the fixed-size matched-reference benchmark,
+and the initialization-sensitivity study use maximum Stage-1/Stage-2 Adam
+iteration counts of `5000/600`. These settings apply to the image-based and
+numerical matched-reference cases with `N = 349`, `L = 10`, and nominal radius
+`r = 0.21681174785100282`.
+
+The size-scaling results reported in manuscript Tables 1 and 2 use a separate
+robust-control schedule. They use maximum Stage-1/Stage-2 Adam iteration
+counts of `8000/12000`, respectively. The scaling campaign also uses a
+Stage-1 relaxation factor of `0.30`, Adam learning rate of `0.005`,
+intermediate projection interval of `10`, `300` iterations per intermediate
+projection, intermediate projection factor of `0.10`, terminal projection
+limit of `3000`, and feasibility enforcement during Stage-2 acceptance.
+
+All reported differentiable studies use a Stage-2 target total loss of `1e-4`.
+The iteration counts reported in Tables 1 and 2 are sums of Stage-1 and
+Stage-2 Adam iterations; projection sweeps are excluded. All 120 reported
+size-scaling runs reached the Stage-2 target loss and passed the
+full-precision periodic non-overlap check. The maximum iteration limits are
+therefore part of the reproducibility protocol, even when an accepted run
+stops earlier by reaching the target loss.
 
 The exported `points_final` is exactly `points_stage2`. Intermediate and
 terminal overlap projections are Stage-2 operations. Descriptor losses and
@@ -259,8 +278,7 @@ provisional citation may be used:
 
 > W. Tian, S. Chen, M. Yang, T. Yang, L. Meng, and L. Qi,
 > “Differentiable constrained optimization of periodic hard-particle systems
-> with prescribed spatial statistics,” manuscript submitted to the
-> *International Journal of Engineering Science*.
+> with prescribed spatial statistics,” *International Journal of Engineering Science*, 2026, 104734. 
 
 ```bibtex
 @unpublished{tian_differentiable_periodic_rve,
