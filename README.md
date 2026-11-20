@@ -276,9 +276,9 @@ If this code or data contributes to published work, please cite the accompanying
 article. Before the final journal citation and DOI are available, the following
 provisional citation may be used:
 
-> W. Tian, S. Chen, M. Yang, T. Yang, L. Meng, and L. Qi,
-> “Differentiable constrained optimization of periodic hard-particle systems
-> with prescribed spatial statistics,” *International Journal of Engineering Science*, 2026, 104734. 
+> W. Tian, S. Chen, M. Yang, T. Yang, L. Meng, and L. Qi, “Differentiable constrained
+optimization of periodic hard-particle systems with prescribed spatial statistics,”
+*International Journal of Engineering Science*, 2026, 104734.
 
 ```bibtex
 @unpublished{tian_differentiable_periodic_rve,
