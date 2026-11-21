@@ -7,27 +7,45 @@
   "phi1": 0.5153958541738062,
   "phi_rh": 0.5414877692913551,
   "radius_scale": 1.025,
-  "paired_seeds": [
-    71000,
-    71001,
-    71002,
-    71003,
-    71004
-  ],
+  "paired_seeds": {
+    "image": [
+      71000,
+      71001,
+      71002,
+      71003,
+      71004
+    ],
+    "numerical": [
+      71000,
+      71001,
+      71002,
+      71003,
+      71004,
+      71005,
+      71006,
+      71007,
+      71008,
+      71009
+    ]
+  },
   "methods": {
     "overlap_only": "Stage 1 only",
     "rdf_only": "RDF ablation",
     "rdf_ardf": "RDF+ARDF ablation",
-    "gradient_free": "SPSA full-descriptor optimization",
+    "gradient_free": "central SPSA full-descriptor optimization",
     "proposed": "differentiable full-descriptor optimization"
   },
   "evaluation": "common conventional descriptors, exact periodic gap, and identical geometry",
   "final_configuration": "terminal Stage-2 configuration; no Stage 3",
-  "stage2_target_loss": 0.0001,
-  "maximum_iterations": {
-    "stage1": 5000,
-    "stage2": 600
+  "numerical_PR_source": "Table 6 baseline, results/comment2_weight_sensitivity/raw_runs.csv",
+  "numerical_PR_mean_aggregate_error": 0.13089819174067366,
+  "gradient_free_controls": {
+    "algorithm": "central SPSA",
+    "perturbation": 0.01,
+    "learning_rate": 0.012,
+    "updates": 600,
+    "objective_evaluations": 1802,
+    "projection_interval": 25
   },
-  "data_scope": "final plotted metrics and run metadata for all 50 benchmark runs",
-  "generation_note": "Figure 2 is regenerated directly from the stored run metrics; run-level coordinate files and the optimization launcher are not included."
+  "data_scope": "25 image-reference and 50 numerical-reference run records"
 }
